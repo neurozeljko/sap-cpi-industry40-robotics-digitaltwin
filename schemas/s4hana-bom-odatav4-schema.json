@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "S4HANABillOfMaterialODataV4Schema",
+  "type": "object",
+  "properties": {
+    "BillOfMaterial": { "type": "string" },
+    "BillOfMaterialCategory": { "type": "string" },
+    "Material": { "type": "string" },
+    "Plant": { "type": "string" },
+    "to_BillOfMaterialItem": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "BillOfMaterialComponent": { "type": "string" },
+          "BillOfMaterialItemNumber": { "type": "string" },
+          "ComponentQuantity": { "type": "string" }
+        },
+        "required": ["BillOfMaterialComponent", "ComponentQuantity"]
+      }
+    }
+  },
+  "required": ["BillOfMaterial", "Material", "to_BillOfMaterialItem"]
+}

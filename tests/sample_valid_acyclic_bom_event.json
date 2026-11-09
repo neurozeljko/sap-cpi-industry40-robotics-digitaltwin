@@ -1,0 +1,28 @@
+{
+  "robotCellId": "GIGA-CELL-KUKA-09",
+  "assemblyLineId": "LINE-04-CHASSIS",
+  "parentMaterialNumber": "MAT-CHASSIS-EV-900",
+  "telemetrySnapshot": {
+    "axisTemperatureC": 72.4,
+    "actuatorTorqueNm": 380.5,
+    "faultCode": null
+  },
+  "bomItemModifications": [
+    {
+      "itemPosition": "0010",
+      "parentMaterialId": "MAT-CHASSIS-EV-900",
+      "componentMaterialId": "SUB-BATTERY-PACK-LR",
+      "quantity": 1.0,
+      "unitOfMeasure": "PC",
+      "action": "INSERT"
+    },
+    {
+      "itemPosition": "0020",
+      "parentMaterialId": "SUB-BATTERY-PACK-LR",
+      "componentMaterialId": "CELL-MODULE-4680",
+      "quantity": 16.0,
+      "unitOfMeasure": "PC",
+      "action": "INSERT"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RoboticAssemblyEventSchema",
+  "type": "object",
+  "properties": {
+    "robotCellId": { "type": "string" },
+    "assemblyLineId": { "type": "string" },
+    "parentMaterialNumber": { "type": "string" },
+    "telemetrySnapshot": {
+      "type": "object",
+      "properties": {
+        "axisTemperatureC": { "type": "number" },
+        "actuatorTorqueNm": { "type": "number" },
+        "faultCode": { "type": ["string", "null"] }
+      }
+    },
+    "bomItemModifications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "itemPosition": { "type": "string" },
+          "parentMaterialId": { "type": "string" },
+          "componentMaterialId": { "type": "string" },
+          "quantity": { "type": "number" },
+          "unitOfMeasure": { "type": "string" },
+          "action": { "type": "string" }
+        },
+        "required": ["componentMaterialId", "quantity"]
+      }
+    }
+  },
+  "required": ["robotCellId", "parentMaterialNumber", "bomItemModifications"]
+}
